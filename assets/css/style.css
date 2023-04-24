@@ -1,34 +1,29 @@
 
 html, body {
-    color: #051f5a;
-    background: #FFF;
-	font-size: 105%;
-	text-align: justify;
-	font-family: 'Nunito Sans', sans-serif;
-}
+    color: #FFF;
+    background: black;
+    font-size: 105%;
+    text-align: justify;
+    font-family: 'Nunito Sans', sans-serif;
 
-body {
-  background: 
-   url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/codepen.png) bottom center no-repeat,
-   url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png) repeat;
+    background-image: url('../img/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
     font-family: 'Architects Daughter', cursive;
-    color: #C89754;
-	text-align: center;
-	font-weight: 600;
-}
-
-h1{
-	font-size: 300%;
+    color: #BFEBF4;
+    text-align: center;
+    font-weight: 600;
+    font-size: 300%;
 }
 
 h2 {
     font-family: 'Architects Daughter', cursive;
-    color: #C89754;
-	text-align: center;
-	font-weight: 600;
+    color: #BFEBF4;
+    text-align: center;
+    font-weight: 600;
 }
 
 h2 {
@@ -199,7 +194,7 @@ article {
 #image_banniere {
     z-index: 1;
     width: 100%;
-    margin-top: 2%;
+    margin-top: 0;
 }
 
 #menu_home{
@@ -268,7 +263,7 @@ code {
     margin: 1%;
     border: 1px solid lightgrey;
     width: 246px;
-	background: #fff;
+    background: #333;
 }
 
 .projet:hover {
