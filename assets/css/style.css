@@ -1,0 +1,434 @@
+
+html, body {
+    color: #051f5a;
+    background: #FFF;
+	font-size: 105%;
+	text-align: justify;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+  background: 
+   url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/codepen.png) bottom center no-repeat,
+   url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/652/confectionary.png) repeat;
+}
+
+h1 {
+    font-family: 'Architects Daughter', cursive;
+    color: #C89754;
+	text-align: center;
+	font-weight: 600;
+}
+
+h1{
+	font-size: 300%;
+}
+
+h2 {
+    font-family: 'Architects Daughter', cursive;
+    color: #C89754;
+	text-align: center;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 200%;
+}
+
+h4 {
+	color: grey;
+	font-weight: 200;
+}
+
+h5 {
+	color: purple !important;
+	font-size: 110%;
+	font-weight: 500;
+	margin-left: 22%;
+}
+
+em {
+	color: darkred;
+}
+
+#contenu {
+	font-style: italic;
+}
+
+#contenu_centrer {
+	font-style: italic;
+	margin-left: 400px;
+}
+
+#long {
+	margin: 0 auto;
+	border-spacing: 3rem 1rem;
+}
+
+#bordure {
+	border: 1px solid #333;
+}
+
+td#bordure {
+	width: 50%;
+}
+
+#image_contenu_grande {
+	height: 400px;
+	width: auto;
+}
+
+#image_contenu {
+	height: 255px;
+	width: auto;
+}
+
+#image_contenu_petite {
+	height: 180px;
+	width: auto;
+}
+
+#image_contenu_minus {
+	height: auto;
+	width: 300px;
+}
+
+#haut {
+    height: 25%;
+    max-width: 100%;
+}
+
+#ronds_nb_projets {
+    position: static;
+    margin-left: 90%;
+    margin-top: 0%;
+}
+
+#nb_projets {
+    margin-left: 12px;
+	margin-bottom: 5px;
+    text-align: center;
+    width: 25px;
+    border: solid darkred;
+    border-radius: 100%;
+    border-width: 1px;
+    color: darkred;
+}
+
+#image_projet {
+    width: auto;
+}
+
+#image_T {
+    z-index: 2;
+    position: absolute;
+    max-width: 100%;
+    border: 1px;
+    background: white;
+    padding: 1.5em;
+    border-radius: 100%;
+    top: 5%;
+    left: 5%;   
+}
+
+#image_profil {
+    z-index: 2;
+    position: static;
+    max-width: 100%;
+    border-radius: 50%;
+	margin-left: 30%;
+}
+
+#div_intro {
+	width: 400px;
+	margin: 80px auto 100px auto;
+}
+
+#image_intro {
+	width: 100%;
+	height: auto;
+}
+
+article {
+	margin-right: 15px;
+}
+
+#titre_page {
+	margin-bottom: 150px;
+}
+
+#nb_projets:hover {
+    color: red;
+    border: solid red;
+    border-radius: 100%;
+    border-width: 1px;
+}
+
+#menu_tout_premier {
+    margin-left: 13%;
+    margin-bottom: 3%;
+    font-size: 85%
+}
+
+#menu_premier a {
+    color: black;
+    text-decoration: none;
+}
+
+#menu_premier a:visited {
+    color: yellowgreen;
+}
+
+#menu_premier a:hover {
+    text-decoration: underline dotted;
+    text-decoration-color: yellowgreen;
+}
+
+#menu_premier li {
+    margin: 1%;
+}
+
+
+#milieu {
+	height: 50%;
+	display: flex;	
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#image_banniere {
+    z-index: 1;
+    width: 100%;
+    margin-top: 2%;
+}
+
+#menu_home{
+	margin-left: 18.7%;
+}
+
+#menu_home span{
+	color: grey;
+}
+
+#menu_home a{
+	color: blue;
+}
+
+#menu_premier li {
+  display: inline;
+  position: center;
+}
+#menu_home li {
+  display: inline;
+  position: center;
+}
+
+.changement_page {
+    display: flex;
+    justify-content: space-around;
+    width: 415px;
+    margin: auto;
+    margin-top: 50px;
+    color: darkgrey;
+}
+
+#sujet {
+    order: 2;
+}
+
+#sujet_panel {
+	flex-wrap: wrap;
+	justify-content: center;
+	display:flex;
+	min-height: 100vh;
+	margin-left: 0%;
+	order: 1;
+	max-width: 854px;
+}
+
+#bande_gauche {
+	margin-top: 0%;
+	margin-left: 5%;
+	margin-right: 0%;
+	order : 0;
+	max-width: 346px;
+	text-align: justify;
+}
+
+code {
+	color: lightgrey;
+}
+
+.article_projet {
+    width: 100%;
+    height: 60%;
+}
+
+.projet {
+    margin: 1%;
+    border: 1px solid lightgrey;
+    width: 246px;
+	background: #fff;
+}
+
+.projet:hover {
+    width: 31%;
+    margin: 1%;
+    border: 1px solid lightgrey;
+    min-width: 246px;
+    box-shadow: 10px 5px 5px grey;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0s; /* on aurait aussi pu mettre 0.5s */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
+
+.center {
+	text-align: center;
+}
+
+#fin {
+	flex-wrap: wrap;
+	display: flex;
+	max-width: 1200px;
+	margin: auto;
+}
+
+#contact {
+	order: 1;
+	width: 500px;
+}
+#propos{
+	order: 2;
+	width: 250px;
+}
+#information{
+	order: 3;
+	width: 250px;
+}
+
+@media (max-width:1000px) {
+  #bande_gauche {
+    width: 100%;
+  }
+#milieu {
+	flex-direction: column;
+}
+}
+
+#bas {
+    margin-top: 100px;
+}
+
+a.no_decoration:link {
+	text-decoration: none;
+}
+
+a.no_decoration:hover {
+    border-radius: 100%;
+    background-color: #B7F439;
+    color: grey;
+	text-align: center;
+}
+
+.page_actuelle {
+    border: 1px solid yellowgreen;
+    border-radius: 100%;
+    background-color: yellowgreen;
+    color: white;
+	text-align: center;
+}
+
+#bas_page {
+    justify-content: space-between;
+    display: flex;
+}
+
+#copyright {
+    color: darkgray;
+    justify-content: flex-start;
+}
+
+#mentions {
+   justify-content: flex-end;
+}
+
+#mentions h5 a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+#lien_apropos {
+    list-style-type: none;
+}
+
+#lien_apropos a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+#lien_info a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+#lien_info {
+    list-style-type: none;
+}
+
+
+}
