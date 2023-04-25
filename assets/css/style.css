@@ -1,4 +1,3 @@
-
 html, body {
     color: #FFF;
     background: black;
@@ -115,23 +114,33 @@ td#bordure {
 }
 
 #image_T {
-    z-index: 2;
-    position: absolute;
-    max-width: 100%;
-    border: 1px;
-    background: white;
-    padding: 1.5em;
-    border-radius: 100%;
-    top: 5%;
-    left: 5%;   
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+  }
+  
+  #image_T:hover {
+    opacity: 1;
+    background-color: #1E1E1E;
+  }
+  
+  #invisibleImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 #image_profil {
     z-index: 2;
     position: static;
     max-width: 100%;
     border-radius: 50%;
-	margin-left: 30%;
+	margin-left: 10%;
 }
 
 #div_intro {
@@ -171,12 +180,12 @@ article {
 }
 
 #menu_premier a:visited {
-    color: yellowgreen;
+    color: #5a2c1142;
 }
 
 #menu_premier a:hover {
     text-decoration: underline dotted;
-    text-decoration-color: yellowgreen;
+    text-decoration-color: #5a2c1142;
 }
 
 #menu_premier li {
@@ -205,8 +214,8 @@ article {
 	color: grey;
 }
 
-#menu_home a{
-	color: blue;
+a{
+	color: #ffc6c6;
 }
 
 #menu_premier li {
@@ -233,8 +242,8 @@ article {
 
 #sujet_panel {
 	flex-wrap: wrap;
-	justify-content: center;
 	display:flex;
+    justify-content: space-between;
 	min-height: 100vh;
 	margin-left: 0%;
 	order: 1;
@@ -263,7 +272,7 @@ code {
     margin: 1%;
     border: 1px solid lightgrey;
     width: 246px;
-    background: #333;
+    background: #5a2c1142;
 }
 
 .projet:hover {
@@ -271,7 +280,7 @@ code {
     margin: 1%;
     border: 1px solid lightgrey;
     min-width: 246px;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 10px 5px 5px #42200c;
     transition-property: all;
     transition-duration: 0.5s;
     transition-delay: 0s; /* on aurait aussi pu mettre 0.5s */
@@ -296,7 +305,7 @@ code {
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: #fff;
+  background: #333;
   border-radius: 5px;
   width: 30%;
   position: relative;
@@ -305,7 +314,7 @@ code {
 
 .popup h2 {
   margin-top: 0;
-  color: #333;
+  color: white;
   font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
@@ -316,7 +325,7 @@ code {
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: white;
 }
 .popup .close:hover {
   color: #06D85F;
@@ -369,24 +378,20 @@ code {
     margin-top: 100px;
 }
 
-a.no_decoration:link {
+.page-button {
+    color: #ffc6c6;
 	text-decoration: none;
 }
 
-a.no_decoration:hover {
-    border-radius: 100%;
-    background-color: #B7F439;
-    color: grey;
+.page-button:hover {
+    color: #06D85F;
 	text-align: center;
 }
 
-.page_actuelle {
-    border: 1px solid yellowgreen;
-    border-radius: 100%;
-    background-color: yellowgreen;
-    color: white;
-	text-align: center;
-}
+.active-page-button {
+    color: #06D85F; /* set active color */
+  }
+
 
 #bas_page {
     justify-content: space-between;
@@ -423,7 +428,4 @@ a.no_decoration:hover {
 
 #lien_info {
     list-style-type: none;
-}
-
-
 }
