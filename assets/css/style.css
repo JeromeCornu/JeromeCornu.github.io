@@ -258,15 +258,15 @@ a{
 
 #sujet {
     order: 2;
-    margin-right: 150px;
-    margin-left: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+    max-width: 65%;
 }
 
 #sujet_panel {
 	flex-wrap: wrap;
-	display: flex;
-    justify-content: space-between;
-	min-height: 100vh;
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
 	margin-left: 0%;
 	order: 1;
@@ -274,11 +274,8 @@ a{
 
 #bande_gauche {
     background-color: #5a2c1142;
-    margin-top: 0%;
-    margin-left: 0%;
-    margin-right: 5%;
     order: 0;
-    max-width: 346px;
+    max-width: 100%;
     text-align: justify;
     box-shadow: 10px 5px 5px #42200c;
 }
@@ -313,13 +310,12 @@ code {
 }
 
 .projet {
-    margin: 1%;
     width: 246px;
+    margin: 20px;
 }
 
     .projet:hover {
         width: 246px;
-        margin: 1%;
         background-color: #5a2c1142;
         min-width: 246px;
         box-shadow: 10px 5px 5px #42200c;
@@ -410,6 +406,10 @@ code {
 @media (max-width:1000px) {
   #bande_gauche {
     width: 100%;
+  }
+  
+  #sujet {
+    max-width: 100%;
   }
 #milieu {
 	flex-direction: column;
