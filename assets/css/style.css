@@ -61,7 +61,7 @@ em {
     }
 
     #page.active {
-        color: greenyellow;
+        color: #8FC43E;
     }
 
 
@@ -160,11 +160,6 @@ td#bordure {
     position: static;
     max-width: 100%;
     border-radius: 50%;
-	margin-left: 10%;
-}
-
-#linkedin {
-    margin-bottom: 50px;
 }
 
 #div_intro {
@@ -271,11 +266,13 @@ a{
 	display: flex;
     justify-content: space-between;
 	min-height: 100vh;
+    margin-top: 30px;
 	margin-left: 0%;
 	order: 1;
 }
 
 #bande_gauche {
+    background-color: #5a2c1142;
     margin-top: 0%;
     margin-left: 0%;
     margin-right: 5%;
@@ -303,6 +300,15 @@ code {
     display: block;
     text-align: center;
     justify-content: space-between;
+}
+
+#linkedin {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#sujet_panel a{
+    text-decoration: none;
 }
 
 .projet {
