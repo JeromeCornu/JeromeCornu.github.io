@@ -8,6 +8,7 @@ html, body {
     background-image: url('../img/Background.png');
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0%;
 }
 
 h1 {
@@ -222,7 +223,7 @@ article {
 #image_banniere {
     z-index: 1;
     width: 100%;
-    margin-top: 0;
+    height: auto;
 }
 
 #menu_home{
