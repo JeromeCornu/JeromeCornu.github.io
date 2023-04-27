@@ -39,7 +39,7 @@ h5 {
 }
 
 em {
-	color: darkred;
+	color: #8FC43E;
 }
 
 .navigation {
@@ -215,9 +215,17 @@ article {
 
 #milieu {
 	height: 50%;
-	display: flex;	
+	display: flex;
+    justify-content: center;
 	max-width: 1800px;
 	margin: 0 auto;
+}
+
+#contenu {
+    order: 2;
+    margin-right: 5%;
+    margin-left: 5%;
+    max-width: 65%;
 }
 
 #image_banniere {
