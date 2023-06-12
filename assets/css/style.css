@@ -38,8 +38,77 @@ h5 {
 	margin-left: 22%;
 }
 
+
+
+
+
+
+
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+    .button-container a {
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+.container h1 {
+    text-align: center;
+    margin: 0;
+    margin-left: auto; /* Move h1 element to the right */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 em {
-	color: #8FC43E;
+    color: #8FC43E;
 }
 
 .navigation {
