@@ -28,6 +28,13 @@ h2 {
     font-size: 200%;
 }
 
+h3 {
+    font-family: 'Architects Daughter', cursive;
+    color: #BFEBF4;
+    font-weight: 600;
+    font-size: 150%;
+}
+
 h4 {
     color: #BFEBF4;
     font-weight: 200;
@@ -40,11 +47,23 @@ h5 {
     margin-left: 22%;
 }
 
+#main-section {
+    display: flex;
+}
+
+#left-section {
+    flex: 0.5;
+}
+
+#right-section {
+    flex: 1;
+}
+
 .page-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    padding: 30px 0px 30px 0px;
 }
 
 .container {
@@ -73,7 +92,7 @@ h5 {
 
 .container h1 {
     text-align: center;
-    margin: 0;
+    margin: 10px 0px 30px 0px;
     margin-left: auto;
 }
 
@@ -217,10 +236,6 @@ article {
     text-align: justify;
 }
 
-#titre_page {
-    margin-bottom: 150px;
-}
-
 #nb_projets:hover {
     color: red;
     border: solid red;
@@ -321,26 +336,21 @@ a {
     order: 1;
 }
 
-#bande_gauche {
+.background {
     background-color: #5a2c1142;
     order: 0;
     max-width: 100%;
-    text-align: justify;
-    box-shadow: 10px 5px 5px #42200c;
+    box-shadow: 10px 5px 5px 5px #42200c;
+    padding: 0px 0px 50px 0px;
 }
 
 code {
     color: lightgrey;
 }
 
-.article_projet {
-    width: 100%;
-    height: auto;
-}
 
 .info {
-    margin-right: 15px;
-    text-align: center;
+    margin-bottom: 15px;
 }
 
 #pp {
@@ -349,9 +359,11 @@ code {
     justify-content: space-between;
 }
 
-#linkedin {
+.links {
     text-align: center;
-    margin-bottom: 50px;
+    width: 100px;
+    padding: 30px 50px 0px 0px;
+    height: auto;
 }
 
 #sujet_panel a {
@@ -359,10 +371,21 @@ code {
 }
 
 
+.article_projet {
+    display: flex;
+    width: auto;
+    height: 200px;
+    justify-content: center;
+}
+
 .projet {
     width: 246px;
     margin: 20px;
+    padding: 10px;
+    height: 380px;
 }
+
+
 
 .projet:hover {
     width: 246px;
@@ -461,7 +484,7 @@ code {
 }
 
 @media (max-width:1000px) {
-    #bande_gauche {
+    #background {
         width: 100%;
     }
 

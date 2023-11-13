@@ -64,91 +64,109 @@
         <!-------------------------- fin intro -------------------------->
 
         <!-------------------------- PRESENTATION -------------------------->
-        <section>
-            </br></br></br>
-            <h2>
-                Jérôme Cornu</br>- Nickname -</h2></br>
-            <div id="pp">
-                <img id="image_profil" src="assets/img/photo_profil_jerome.png" width="120" height="120">
-                <img id="image_profil" src="assets/img/400x400.png" style="width: 120px; border-radius: 50%;"
-                    height="auto">
+
+        <section id="main-section">
+            <div id="left-section" class="background" style="margin: 0px 100px 100px 100px;">
+                <h2>Jérôme Cornu </br>- Nickname -</h2>
+                <div id="pp">
+                    <img id="image_profil" src="assets/img/photo_profil_jerome.png" width="120" height="120">
+                    <img id="image_profil" src="assets/img/400x400.png" style="width: 120px; border-radius: 50%;"
+                        height="auto">
+                </div>
+                <article style="text-align:center">
+                    Réalisateur de la page
+                </article>
+                <article id="titre_page" style="text-align:center">
+                    "Mon portfolio et mes projets"
+                </article>
             </div>
-            <article style="text-align:center">
-                </br></br> Réalisateur de la page
-            </article>
-            <article id="titre_page" style="text-align:center">
-                "Mon porfolio et mes projets"
-            </article>
+
+            <div id="right-section">
+                <header>
+                    <h3>Explication de la page </h3>
+                    <h3> <code>_____________</code> </h3>
+                </header>
+                <article class="info">
+                    Développeur français de jeux vidéo, je vous présente sur cette page les principaux projets auxquels
+                    j'ai contribué.
+                </article>
+                <article class="info">
+                    J'ai pu manier plusieurs langages et moteurs de création de jeu vidéo. J'ai entièrement codé ce
+                    site, j'espère qu'il vous plaira.
+                </article>
+
+                <article style="display: flex; justify-content: left;">
+                    <figure>
+                        <img src="assets/img/LinkedInLogo.png" class="links" alt="LinkedIn Logo">
+                        <figcaption style="margin-left: 20px; color: rgb(214, 214, 214)">Linkedin</figcaption>
+                    </figure>
+
+                    <figure>
+                        <a href="https://github.com/JeromeCornu"><img src="assets/img/Github.png" class="links"></a>
+                        <figcaption style="margin-left: 20px; color: rgb(214, 214, 214)">Github</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="assets/files/CV CORNU Jérôme - Francais.pdf" download="CV CORNU Jérôme - Francais.pdf">
+                            <img src="assets/img/PortfolioLogo.png" class="links"></a>
+                        <figcaption style="margin-left: 0px; color: rgb(214, 214, 214)">Download CV</figcaption>
+                    </figure>
+
+                </article>
+
+
+            </div>
         </section>
 
-        <section id="explication">
-            <header>
-                <h2>
-                    Explication de la page </h2>
-                <h2 class="center" id="ligne_separation"> <code>_____________</code> </h2>
-            </header>
-            <article class="info">
-                </br> Développeur français de jeux vidéo, je vous présente sur cette page les principaux projets
-                auxquels j'ai contribué.
-            </article>
-            <article class="info">
-                </br> J'ai pu manier plusieurs langages et moteurs de création de jeu vidéo.
-            </article>
-            </br></br></br>
-
-            <article id="linkedin">
-                </br><a href="https://www.linkedin.com/in/jeromecornu-game/"><img src="assets/img/LinkedInLogo.png"
-                        id="linkedin" style="width: 210px;" height="auto"></a>
-            </article>
-        </section>
         <!-------------------------- fin presentation -------------------------->
 
 
         <!-------------------------- MES PROJETS FAVORIS -------------------------->
-        <div class="page-container">
-            <div class="container">
-                <h2> Mes projets favoris</h2>
+        <section class="background">
+            <div class="page-container">
+                <div class="container">
+                    <h2> Mes projets favoris</h2>
+                </div>
             </div>
-        </div>
 
-        <!-- Section pour le carrousel -->
-        <section id="carousel-section">
-            <div id="carousel">
-                <div class="prevLeftSecond">
-                    <a href="page/fr/PUBC.html" class="projet_caroussel-link">
-                        <img src="assets/img/PUBCCadre.png" alt="PUBC Logo">
-                    </a>
+            <!-- Section pour le carrousel -->
+            <section id="carousel-section">
+                <div id="carousel">
+                    <div class="prevLeftSecond">
+                        <a href="page/fr/PUBC.html" class="projet_caroussel-link">
+                            <img src="assets/img/PUBCCadre.png" alt="PUBC Logo">
+                        </a>
+                    </div>
+
+                    <div class="prev">
+                        <a href="page/fr/Celeste.html" class="projet_caroussel-link">
+                            <img src="assets/img/CelesteCadre.png" alt="Celeste Logo">
+                        </a>
+                    </div>
+
+                    <div class="selected">
+                        <a href="page/fr/DurableDeckDuel.html" class="projet_caroussel-link">
+                            <img src="assets/img/DDDCadre.png" alt="Fontfroide Logo">
+                        </a>
+                    </div>
+
+                    <div class="next">
+                        <a href="page/fr/Fontfroide.html" class="projet_caroussel-link">
+                            <img src="assets/img/FontfroideCadre.png" alt="Fontfroide Logo">
+                        </a>
+                    </div>
+
+                    <div class="nextRightSecond">
+                        <a href="page/fr/LegendOfGoblina.html" class="projet_caroussel-link">
+                            <img src="assets/img/LegendOfGoblinaCadre.png" alt="Goblina Logo">
+                        </a>
+                    </div>
                 </div>
-        
-                <div class="prev">
-                    <a href="page/fr/Celeste.html" class="projet_caroussel-link">
-                        <img src="assets/img/CelesteCadre.png" alt="Celeste Logo">
-                    </a>
+
+                <div class="buttons">
+                    <button class="button button-primary" id="prev">Prev</button>
+                    <button class="button button-primary" id="next">Next</button>
                 </div>
-        
-                <div class="selected">
-                    <a href="page/fr/DurableDeckDuel.html" class="projet_caroussel-link">
-                        <img src="assets/img/DDDCadre.png" alt="Fontfroide Logo">
-                    </a>
-                </div>
-        
-                <div class="next">
-                    <a href="page/fr/Fontfroide.html" class="projet_caroussel-link">
-                        <img src="assets/img/FontfroideCadre.png" alt="Fontfroide Logo">
-                    </a>
-                </div>
-        
-                <div class="nextRightSecond">
-                    <a href="page/fr/LegendOfGoblina.html" class="projet_caroussel-link">
-                        <img src="assets/img/LegendOfGoblinaCadre.png" alt="Goblina Logo">
-                    </a>
-                </div>
-            </div>
-        
-            <div class="buttons">
-                <button class="button button-primary" id="prev">Prev</button>
-                <button class="button button-primary" id="next">Next</button>
-            </div>
+            </section>
         </section>
 
         <!-- Fin de la section du carrousel -->
@@ -156,10 +174,10 @@
         <!-------------------------- fin mes projets favoris -------------------------->
 
 
-        <!-------------------------- MES AUTRES PROJETS -------------------------->
+        <!-------------------------- TOUS MES PROJETS -------------------------->
         <div class="page-container">
             <div class="container">
-                <h2> Mes autres projets</h2>
+                <h2> Tous mes projets</h2>
             </div>
         </div>
 
