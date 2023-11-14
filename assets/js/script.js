@@ -99,7 +99,7 @@ $(document).ready(function () {
 
 
     // Gestionnaire d'événements
-    $('.projet_caroussel-link').on('click', function (e) {
+    $('.projet_carousel-link').on('click', function (e) {
         // Si la div parente n'a pas la classe "selected", annule le comportement par défaut du clic
         if (!$(this).parent().hasClass('selected')) {
             e.preventDefault();
