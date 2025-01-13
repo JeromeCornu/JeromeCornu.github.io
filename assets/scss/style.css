@@ -1,108 +1,252 @@
+/* Links (default state) */
+a {
+  color: #bfac93;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Links on hover */
+a:hover {
+  color: #d6c7af;
+  text-decoration: underline;
+  filter: brightness(1.1);
+}
+
+a:hover img {
+  transform: scale(1.10);
+}
+
+#carousel a:hover img {
+  transform: none;
+}
+
+/* Titles (h1, h2, h3, etc.) */
+h1,
+h2,
+h4,
+h5,
+h6 {
+  color: #fff5f5;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+h3 {
+  color: #d6c7af;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Additional customization for specific sections */
+#menu_home a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #bfac93;
+  text-decoration: none;
+}
+
+#menu_home a:hover {
+  color: #d6c7af;
+}
+
+/* Carousel container */
 #carousel {
   position: relative;
   height: 400px;
   top: 50%;
   overflow: hidden;
 }
+
+/* Carousel elements */
 #carousel div {
   position: absolute;
   transition: transform 1s, left 1s, opacity 1s, z-index 0s;
   opacity: 1;
 }
+
 #carousel div img {
   width: 400px;
   transition: width 1s;
 }
+
+/* Hidden elements on the left */
 #carousel div.hideLeft {
   left: 0%;
   opacity: 0;
   transform: translateY(50%) translateX(-50%);
 }
+
 #carousel div.hideLeft img {
   width: 200px;
 }
+
+/* Hidden elements on the right */
 #carousel div.hideRight {
   left: 100%;
   opacity: 0;
   transform: translateY(50%) translateX(-50%);
 }
+
 #carousel div.hideRight img {
   width: 200px;
 }
+
+/* Previous element styling */
 #carousel div.prev {
   z-index: 5;
   left: 30%;
   transform: translateY(50px) translateX(-50%);
 }
+
 #carousel div.prev img {
   width: 300px;
 }
+
+/* Second previous element styling */
 #carousel div.prevLeftSecond {
   z-index: 4;
   left: 15%;
   transform: translateY(50%) translateX(-50%);
   opacity: 0.7;
 }
+
 #carousel div.prevLeftSecond img {
   width: 200px;
 }
+
+/* Selected (center) element styling */
 #carousel div.selected {
   z-index: 10;
   left: 50%;
   transform: translateY(0px) translateX(-50%);
 }
+
+/* Next element styling */
 #carousel div.next {
   z-index: 5;
   left: 70%;
   transform: translateY(50px) translateX(-50%);
 }
+
 #carousel div.next img {
   width: 300px;
 }
+
+/* Second next element styling */
 #carousel div.nextRightSecond {
   z-index: 4;
   left: 85%;
   transform: translateY(50%) translateX(-50%);
   opacity: 0.7;
 }
+
 #carousel div.nextRightSecond img {
   width: 200px;
 }
 
+/* Button container */
 .buttons {
   text-align: center;
   margin-top: 40px;
 }
 
-.button {
+/* Generic button styling */
+button,
+.button,
+.filter-button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
   text-align: center;
-  text-decoration: none;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  border: 2px solid #42200c; /* Brown border */
+  background-color: #fff5f5; /* Light background */
+  color: #42200c; /* Brown text */
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.button-primary {
-  color: rgb(255, 198, 198);
+/* Hover effect for buttons */
+button:hover,
+.button:hover,
+.filter-button:hover {
   background-color: #42200c;
-  border: 2px solid #42200c;
+  color: #fff5f5;
 }
 
-.button-primary:hover {
-  background-color: rgba(90, 44, 17, 0.2588235294);
+/* Active state for buttons */
+button.active,
+.button.active,
+.filter-button.active {
+  background-color: #42200c;
+  color: #fff5f5;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Flexbox styling for filters or button groups */
+.filters,
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Project cards */
 .projet {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid #42200c; 
+  border-radius: 10px;
+  background-color: #bfac93;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.projet h3.center, .projet h4.center {
-  margin-left: 0;
-  text-align: center;
+/* Hover effect for project cards */
+.projet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  background-color: #d6c7af;
 }
+
+/* Transition for project images */
+.projet img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for project images */
+.projet:hover img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* Title styling for project cards */
+.projet h3.center {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #2c1a0d;
+}
+
+/* Subtitle styling for project cards */
+.projet h4.center {
+  font-size: 20px;
+  color: #42200c;
+}
+
+.projet.hidden {
+  display: none !important;
+}
+
+#sujet_panel {
+  min-height: 500px; 
+}
+

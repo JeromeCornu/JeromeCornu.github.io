@@ -1,109 +1,120 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.getElementById("myCarousel");
-    let currentIndex = 0;
-    let intervalId; // Variable pour stocker l'ID de l'intervalle
-
-    function showItem(index) {
-        const translateValue = -index * 20; // 20% per item
-        carousel.style.transform = `translateX(${translateValue}%)`;
+  function moveToSelected(element) {
+    let selected;
+    if (element === "next") {
+      selected = $(".selected").next();
+      if (!selected.length) {
+        // if there is no other elements, go back to the first
+        selected = $("#carousel div").first();
+      }
+    } else if (element === "prev") {
+      selected = $(".selected").prev();
+      if (!selected.length) {
+        // if there is no other elements, go back to the last
+        selected = $("#carousel div").last();
+      }
+    } else {
+      selected = element;
     }
 
-    function nextItem() {
-        currentIndex = (currentIndex + 1) % 5; // Assuming 5 items
-        showItem(currentIndex);
-        resetInterval();
+    const next = $(selected).next();
+    const prev = $(selected).prev();
+    const prevSecond = $(prev).prev();
+    const nextSecond = $(next).next();
+
+    $(selected).removeClass().addClass("selected");
+
+    $(prev).removeClass().addClass("prev");
+    $(next).removeClass().addClass("next");
+
+    $(nextSecond).removeClass().addClass("nextRightSecond");
+    $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+    $(nextSecond).nextAll().removeClass().addClass("hideRight");
+    $(prevSecond).prevAll().removeClass().addClass("hideLeft");
+  }
+
+  $(document).keydown(function (e) {
+    switch (e.which) {
+      case 37: // left
+        moveToSelected("prev");
+        break;
+
+      case 39: // right
+        moveToSelected("next");
+        break;
+
+      default:
+        return;
     }
+    e.preventDefault();
+  });
 
-    function prevItem() {
-        currentIndex = (currentIndex - 1 + 5) % 5; // Assuming 5 items
-        showItem(currentIndex);
-        resetInterval();
+  $("#carousel div").click(function () {
+    moveToSelected($(this));
+  });
+
+  $("#prev").click(function () {
+    moveToSelected("prev");
+  });
+
+  $("#next").click(function () {
+    moveToSelected("next");
+  });
+
+  // Event handler
+  $(".projet_carousel-link").on("click", function (e) {
+    if (!$(this).parent().hasClass("selected")) {
+      e.preventDefault();
     }
+  });
 
-    function resetInterval() {
-        clearInterval(intervalId);
-        intervalId = setInterval(nextItem, 3000);
-    }
+  // Initialize active filters
+  const activeFilters = new Set();
 
-    intervalId = setInterval(nextItem, 3000); // Auto advance every 3 seconds
+  // Add event listeners to filter buttons
+  document.querySelectorAll(".filter-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
 
-    // Ajouter des gestionnaires d'événements pour les boutons
-    const nextButton = document.getElementById("nextButton");
-    const prevButton = document.getElementById("prevButton");
-
-    nextButton.addEventListener("click", function () {
-        nextItem();
-    });
-
-    prevButton.addEventListener("click", function () {
-        prevItem();
-    });
-});
-
-
-$(document).ready(function () {
-    function moveToSelected(element) {
-
-        if (element == "next") {
-            var selected = $(".selected").next();
-        } else if (element == "prev") {
-            var selected = $(".selected").prev();
+      if (filter === "all") {
+        // Clear all other filters
+        activeFilters.clear();
+        document
+          .querySelectorAll(".filter-button")
+          .forEach((btn) => btn.classList.remove("active"));
+      } else {
+        // Toggle the filter
+        if (activeFilters.has(filter)) {
+          activeFilters.delete(filter);
         } else {
-            var selected = element;
+          activeFilters.add(filter);
         }
+      }
 
-        var next = $(selected).next();
-        var prev = $(selected).prev();
-        var prevSecond = $(prev).prev();
-        var nextSecond = $(next).next();
+      // Manage active button styles
+      if (filter === "all") {
+        button.classList.add("active");
+      } else {
+        button.classList.toggle("active", activeFilters.has(filter));
+        document
+          .querySelector('.filter-button[data-filter="all"]')
+          .classList.remove("active");
+      }
 
-        $(selected).removeClass().addClass("selected");
+      // Apply filters to projects
+      document.querySelectorAll(".projet").forEach((project) => {
+        const projectClasses = Array.from(project.classList);
+        const matches = Array.from(activeFilters).every((filter) =>
+          projectClasses.includes(filter)
+        );
 
-        $(prev).removeClass().addClass("prev");
-        $(next).removeClass().addClass("next");
-
-        $(nextSecond).removeClass().addClass("nextRightSecond");
-        $(prevSecond).removeClass().addClass("prevLeftSecond");
-
-        $(nextSecond).nextAll().removeClass().addClass('hideRight');
-        $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-
-    }
-
-    $(document).keydown(function (e) {
-        switch (e.which) {
-            case 37: // left
-                moveToSelected('prev');
-                break;
-
-            case 39: // right
-                moveToSelected('next');
-                break;
-
-            default: return;
+        if (activeFilters.size === 0 || matches) {
+          project.classList.remove("hidden");
+        } else {
+          project.classList.add("hidden");
         }
-        e.preventDefault();
+      });
     });
-
-    $('#carousel div').click(function () {
-        moveToSelected($(this));
-    });
-
-    $('#prev').click(function () {
-        moveToSelected('prev');
-    });
-
-    $('#next').click(function () {
-        moveToSelected('next');
-    });
-
-
-    // Gestionnaire d'événements
-    $('.projet_carousel-link').on('click', function (e) {
-        // Si la div parente n'a pas la classe "selected", annule le comportement par défaut du clic
-        if (!$(this).parent().hasClass('selected')) {
-            e.preventDefault();
-        }
-    });
-
+  });
 });
