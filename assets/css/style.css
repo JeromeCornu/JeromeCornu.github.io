@@ -899,89 +899,115 @@ button.active,
 }
 
 
+/* Styles généraux pour petits écrans (mobiles) */
 @media screen and (max-width: 768px) {
-  /* Augmenter la taille du texte global */
-  html,
+  /* Général */
   body {
-    font-size: 120%; /* Augmente la taille globale légèrement */
+    font-size: 90%;
+    text-align: left;
   }
 
-  /* Ajuster les titres pour mobile */
-  h1 {
-    font-size: 220%; /* Ajustement pour garder un effet visuel fort */
+  /* Sections */
+  #main-section {
+    flex-direction: column;
   }
 
-  h2 {
-    font-size: 200%; /* Taille légèrement plus grande */
+  #left-section,
+  #right-section {
+    margin: 0;
+    flex: 1 1 auto;
   }
 
-  h3 {
-    font-size: 160%; /* Rendre les sous-titres plus visibles */
+  #contenu {
+    max-width: 90%;
+    margin: 0 auto;
   }
 
-  h4 {
-    font-size: 130%; /* Uniformité pour les sous-sous-titres */
-  }
-
-  h5, h6 {
-    font-size: 120%; /* Ajustement plus subtil */
-  }
-
-  /* Texte général dans les sections */
-  article,
-  p,
-  ul,
-  li {
-    font-size: 110%; /* Lisibilité accrue pour le contenu */
-    line-height: 1.7; /* Espacement augmenté pour le confort de lecture */
-  }
-
-  /* Footer spécifique */
-  .footer-container {
+  #about-me .about-content {
     flex-direction: column;
     align-items: center;
   }
 
-  .footer-about,
-  .footer-links,
-  .footer-social {
+  .about-profile,
+  .about-description {
+    max-width: 100%;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #image_intro {
+    max-width: 90%;
+  }
+
+  /* Navigation */
+  .navigation {
+    flex-direction: column;
+  }
+
+  /* Projets */
+  .projet {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
     text-align: center;
-    flex: 1 1 100%;
-    margin-bottom: 20px; /* Espacement entre les sections */
-  }
-
-  .footer-about p,
-  .footer-links ul {
-    font-size: 110%; /* Taille légèrement augmentée pour le footer */
-    line-height: 1.6; /* Espacement accru pour le confort */
-  }
-
-  .footer-links li {
-    margin-bottom: 12px; /* Ajuste l'espacement entre les liens */
-  }
-
-  .footer-social .social-link {
-    font-size: 110%; /* Taille des liens sociaux plus grande */
-  }
-
-  .footer-bottom {
-    font-size: 90%; /* Taille légèrement réduite pour les crédits */
-  }
-
-  /* Liens dans le footer */
-  .footer-links a,
-  .social-links a {
-    font-size: 110%;
-    font-weight: bold; /* Renforce la visibilité */
-  }
-
-  /* Boutons ou filtres */
-  button,
-  .button,
-  .filter-button {
-    font-size: 110%;
-    padding: 12px 20px; /* Meilleur espacement pour le confort */
   }
 }
 
+/* Styles pour tablettes */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Sections */
+  #about-me .about-content {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .projet {
+    width: 48%; /* Deux projets par ligne */
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: row;
+  }
+}
+
+/* Styles pour écrans très larges */
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 110%;
+  }
+
+  #about-me .about-content {
+    max-width: 80%;
+    margin: auto;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+}
 
