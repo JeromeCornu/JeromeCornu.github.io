@@ -912,3 +912,67 @@ button.active,
     flex: 1 1 100%;
   }
 }
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+  /* Augmenter la taille du texte global */
+  html,
+  body {
+    font-size: 115%; /* Augmente la taille globale légèrement */
+  }
+
+  /* Ajuster les titres pour mobile */
+  h1 {
+    font-size: 200%;
+  }
+
+  h2 {
+    font-size: 180%;
+  }
+
+  h3 {
+    font-size: 140%;
+  }
+
+  /* Texte général dans les sections */
+  article,
+  p,
+  ul,
+  li {
+    font-size: 105%;
+    line-height: 1.6; /* Augmente l'espacement entre les lignes pour une meilleure lisibilité */
+  }
+
+  /* Footer spécifique */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    text-align: center;
+    flex: 1 1 100%;
+    margin-bottom: 20px; /* Espacement entre les sections */
+  }
+
+  .footer-about p,
+  .footer-links p {
+    font-size: 90%; /* Réduit légèrement le texte dans le footer */
+    line-height: 1.4; /* Espacement plus compact pour éviter l'effet surchargé */
+  }
+
+  .footer-links li {
+    margin-bottom: 10px; /* Ajuste l'espacement entre les liens */
+  }
+
+  .footer-social .social-link {
+    font-size: 100%; /* Taille normale pour les liens sociaux */
+  }
+
+  .footer-bottom {
+    font-size: 80%; /* Texte plus petit pour les crédits */
+  }
+}
+
