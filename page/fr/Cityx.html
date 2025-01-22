@@ -17,6 +17,9 @@
 
 	<link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
+    
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
             </div>
 
             <section id="menu_home">
-                <a href="../../index.html#portfolio" title="Immersion/Home">Home</a>
+                <a href="../../index.html#portfolio" title="Immersion/Home" class="line">Home</a>
                 <span>| Cityx</span>
             </section>
         </header>
@@ -44,27 +47,75 @@
 
     <div id="milieu">
         <div id="contenu">
-            <h2>Context du projet</h2>
+            <h2>CONTEXT</h2>
             <article>
-                Cityx est un city-builder éducatif combinant apprentissage des mathématiques et jeu amusant. Les enfants de primaire progressent dans le jeu en résolvant des problèmes mathématiques adaptés.
+                <em>Cityx</em> est un <em>city-builder éducatif</em> combinant l'apprentissage des mathématiques et le jeu amusant, conçu pour les élèves de niveau CM1/CM2.
+                </br></br>
+                Les joueurs doivent agrandir leur ville en recrutant des citoyens possédant des compétences spécifiques dans divers domaines. Ces compétences sont débloquées en résolvant des problèmes mathématiques adaptés au contexte et à la progression du joueur.
+                </br></br></br>
+                La difficulté principale a été d'étudier comment rendre un jeu à la fois <em>ludique et amusant</em>. Pour garder le joueur engagé, plusieurs éléments ont été mis en place, parmi lesquels :
+                <ul>
+                    <li>Personnages attachants</li>
+                    <li>Interactions possibles</li>
+                    <li>Graphismes bienveillants</li>
+                    <li>Compétitivité amicale</li>
+                    <li>Courbe de difficulté progressive</li>
+                    <li>Récompenses intrinsèques et extrinsèques</li>
+                </ul>
 
                 <h3>Date de création du projet</h3>
-                Réalisé en 2023 lors de mon alternance chez MathsAndGo, Gaming Campus.
+                Réalisé en 2023 lors de mon alternance chez MathsAndGo.
 
                 <h3>Equipe</h3>
-                Développé seul dans le cadre de mon alternance.
+                Développé seul.
             </article> </br>
 
-            <h2>Liens vers le Code et la Build du jeu</h2>
-            <h3>Code</h3>
+            <h2>LIEN(s)</h2>
             <article>
-                <a href="https://github.com/toncompte/Cityx.git"> Cliquez ici pour accéder au GitHub </a>
+                <a href="https://www.mathsandgo.com" class="line"> Cliquez ici pour jouer au jeu</a> (bientot disponible !)
             </article> </br>
         </div>
     </div>
 
     <footer id="bas">
-        <section id="bas_page"></section>
+        <section id="bas_page">
+          <div class="footer-container">
+            <!-- Section gauche : Infos sur l'auteur -->
+            <div class="footer-about">
+              <h4>À propos de l'auteur</h4>
+              <p>
+                <em>Jérôme Cornu</em>, développeur passionné spécialisé en jeux vidéo. Je combine créativité et
+                technique pour créer des expériences captivantes.
+              </p>
+            </div>
+      
+            <!-- Section centrale : Navigation rapide -->
+            <div class="footer-links">
+              <h4>Liens utiles</h4>
+              <ul>
+                <li><a href="../../#portfolio" class="footer-link line">Projets</a></li>
+                <li><a href="../../#about-me" class="footer-link line">À propos</a></li>
+                <li><a href="../../assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+              </ul>
+            </div>
+      
+            <!-- Section droite : Réseaux sociaux -->
+            <div class="footer-social">
+              <h4>Suivez-moi</h4>
+              <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank" class="social-link">
+                <img src="../../assets/img/LinkedInLogo.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/JeromeCornu" target="_blank" class="social-link">
+                <img src="../../assets/img/Github.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Jérôme Cornu. Tous droits réservés.</p>
+          </div>
+        </section>
     </footer>
 </body>
 

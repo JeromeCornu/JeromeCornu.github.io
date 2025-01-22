@@ -23,6 +23,8 @@
 	<link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
 
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 
@@ -31,23 +33,18 @@
 	<div id="haut">
 		<script src="../../assets/js/script.js"></script>
 
-
 		<header>
-
 			<div style="position: relative;">
 				<img src="../../assets/img/BannerJerome.PNG" id="image_banniere">
 			</div>
 
 			<section id="menu_home">
-				<a href="../../index.html#portfolio" title="Immersion/Home">Home</a>
+			<a href="../../index.html#portfolio" title="Immersion/Home" class="line">Home</a>
 				<span>| Catalogue</span>
 			</section>
-
 		</header>
 
 		<h1>- Deep Descent -</h1>
-
-		
 
 		<div id="div_intro">
 			<video controls id="image_intro">
@@ -62,7 +59,7 @@
 	<div id="milieu">
 		<div id="contenu">
 
-			<h2>Context du projet</h2>
+			<h2>CONTEXT</h2>
 			<article>
 				Le projet consiste à créer un <em>jeu en 3D à la première personne où l’on progresse en équipe</em> en utilisant le moteur Unity. Le langage utilisé est le C# et le jeu est un Dungeon Crawler multijoueur.</br>
 
@@ -72,6 +69,21 @@
 				Les joueurs incarnent différents personnages avec des statistiques spécifiques et doivent coordonner leurs efforts pour survivre aux défis croissants du jeu.</br>
 
 				L'un des joueurs peut créer une session et inviter les autres à rejoindre en utilisant un ID spécifique.
+
+				</br></br>
+				Ce projet m'a permis de découvrir différentes méthode de mise en place d'un envirronement multijoueur :
+				<ul>
+                    <li>
+                        <em>Client-Serveur</em> : Idéal pour les jeux à grandes échelles comme Lol ou Overwatch. Il permet de bien gérer la triche et les données du jeu, le client peut ressentir du lag en fonction de sa distance avec le serveur.
+                    </li>
+					<li>
+                        <em>Peer-to-Peer</em> : Losqu'il n'y a pas besoin de controller la triche comme dans Borderlands ou Age Of Empire II. Un client joue le role du serveur, il faut que celui ci ait du bon materiel.
+                    </li>
+					<li>
+                        <em>Architecture hybride</em> : Pour des jeux de taille moyenne avec des besoins d'optimisation, utilisé dans Fortnite ou For Honor pour certaines fonctionnalitées (système vocal ou mouvement). Combinaison des deux architecture précédente.
+                    </li>
+				</ul>
+
 
 				<h3>Date de création du projet</h3>
 				Projet réalisé sur une période de 2 mois, avec l'équivalent de 3 semaines de travail, en avril 2024.
@@ -87,15 +99,15 @@
 
 			</article> </br>
 
-			<h2>Liens vers le Code et la Build du jeu</h2>
-            <h3>Code</h3>
+            <h2>LIEN(s)</h2>
+            
             <article>
-                <a href="https://github.com/Ryunawa/DeepDescent.git"> Cliquez ici pour acceder au GitHub </a>
+                <a href="https://github.com/Ryunawa/DeepDescent.git" class="line"> Cliquez ici pour acceder au GitHub </a>
             </article> </br>
 
-            <h3>Build</h3>
+            
             <article>
-                <a href="https://jeromecornu.itch.io/deep-descent"> Cliquez
+                <a href="https://jeromecornu.itch.io/deep-descent" class="line"> Cliquez
                     ici pour télécharger le jeu </a>
             </article> </br>
 
@@ -105,6 +117,42 @@
 
 	<footer id="bas">
 		<section id="bas_page">
+		  <div class="footer-container">
+			<!-- Section gauche : Infos sur l'auteur -->
+			<div class="footer-about">
+			  <h4>À propos de l'auteur</h4>
+			  <p>
+				<em>Jérôme Cornu</em>, développeur passionné spécialisé en jeux vidéo. Je combine créativité et
+				technique pour créer des expériences captivantes.
+			  </p>
+			</div>
+	  
+			<!-- Section centrale : Navigation rapide -->
+			<div class="footer-links">
+			  <h4>Liens utiles</h4>
+			  <ul>
+				<li><a href="../../#portfolio" class="footer-link line">Projets</a></li>
+				<li><a href="../../#about-me" class="footer-link line">À propos</a></li>
+				<li><a href="../../assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+			  </ul>
+			</div>
+	  
+			<!-- Section droite : Réseaux sociaux -->
+			<div class="footer-social">
+			  <h4>Suivez-moi</h4>
+			  <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank" class="social-link">
+				<img src="../../assets/img/LinkedInLogo.png" alt="LinkedIn" />
+				<span>LinkedIn</span>
+			  </a>
+			  <a href="https://github.com/JeromeCornu" target="_blank" class="social-link">
+				<img src="../../assets/img/Github.png" alt="GitHub" />
+				<span>GitHub</span>
+			  </a>
+			</div>
+		  </div>
+		  <div class="footer-bottom">
+			<p>© 2025 Jérôme Cornu. Tous droits réservés.</p>
+		  </div>
 		</section>
 	</footer>
 </body>

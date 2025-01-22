@@ -17,6 +17,9 @@
 
 	<link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
+    
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
             </div>
 
             <section id="menu_home">
-                <a href="../../index.html#portfolio" title="Immersion/Home">Home</a>
+                <a href="../../index.html#portfolio" title="Immersion/Home" class="line">Home</a>
                 <span>| Catch the AI</span>
             </section>
         </header>
@@ -44,27 +47,91 @@
 
     <div id="milieu">
         <div id="contenu">
-            <h2>Context du projet</h2>
+            <h2>CONTEXT</h2>
             <article>
-                Catch the AI est un jeu "chess-like" basé sur le <em>Yokaï no Mori</em>. Il met en œuvre l'algorithme de Monte Carlo Tree Search pour calculer les stratégies des IA lors des parties.
+                <em>Catch the AI</em> est un jeu "chess-like" basé sur le <em>Yokaï no Mori</em>. Il utilise l'algorithme de <em>Monte Carlo Tree Search (MCTS)</em> pour calculer les stratégies des IA durant les parties.
+            
+            </br></br>
+                Ce projet m'a permis de comprendre les différents algorithmes utilisés pour les IA. Bien que j'aie principalement implémenté le <em>MCTS</em> ici, j'ai également exploré et compris les principes des approches suivantes :
+                <ul>
+                    <li>
+                        <em>Minimax avec élagage Alpha-Bêta</em> : Idéal pour les jeux compétitifs 1v1. Une optimisation est possible pour réduire le nombre de branches à explorer grâce au <em>pruning</em>.
+                    </li>
+                    <li>
+                        <em>Q-Learning</em> : Adapté aux jeux avec de nombreuses possibilités et des réactions imprévisibles (par exemple : <em>FIFA</em>).
+                    </li>
+                    <li>
+                        <em>Deep Reinforcement Learning (DRL)</em> : Convient aux jeux complexes où l'IA apprend par l'expérience.
+                    </li>
+                    <li>
+                        <em>Arbre de décision heuristique</em> : Utilisé pour les jeux avec des règles bien définies à l'avance.
+                    </li>
+                    <li>
+                        <em>Behavior Tree</em> : Une approche simple pour des comportements basés sur des règles spécifiques définies via des conditions ("if").
+                    </li>
+                    <li>
+                        <em>Model-based planning</em> : Idéal pour les jeux comportant de nombreuses variables mais avec un nombre limité de réponses possibles (par exemple : Civilisation). Cette méthode simplifie l'environnement de jeu et s'appuie sur un modèle mathématique pour prédire les possibilités.
+                    </li>
+                </br>
+                    <li>
+                        <em>Techniques d'optimisation variées</em> : Incluent la définition d'états pour réduire la recherche, le mélange de méthodes, l'anticipation, la mise en cache des informations, l'utilisation de pools d'objets, et bien plus encore.
+                    </li>
+                </ul>            
 
                 <h3>Date de création du projet</h3>
                 Réalisé en 2024 dans le cadre du Gaming Campus.
 
                 <h3>Equipe</h3>
-                Développé en collaboration avec un autre développeur.
+                Développé en 1 semaine en collaboration avec un autre développeur, Hugo Marseu.
             </article> </br>
 
-            <h2>Liens vers le Code et la Build du jeu</h2>
-            <h3>Code</h3>
+            <h2>LIEN(s)</h2>
+            
             <article>
-                <a href="https://github.com/toncompte/CatchTheAI.git"> Cliquez ici pour accéder au GitHub </a>
+                <a href="https://github.com/hmarseu/CatchTheAI" class="line"> Cliquez ici pour accéder au GitHub </a>
             </article> </br>
         </div>
     </div>
 
     <footer id="bas">
-        <section id="bas_page"></section>
+        <section id="bas_page">
+          <div class="footer-container">
+            <!-- Section gauche : Infos sur l'auteur -->
+            <div class="footer-about">
+              <h4>À propos de l'auteur</h4>
+              <p>
+                <em>Jérôme Cornu</em>, développeur passionné spécialisé en jeux vidéo. Je combine créativité et
+                technique pour créer des expériences captivantes.
+              </p>
+            </div>
+      
+            <!-- Section centrale : Navigation rapide -->
+            <div class="footer-links">
+              <h4>Liens utiles</h4>
+              <ul>
+                <li><a href="../../#portfolio" class="footer-link line">Projets</a></li>
+                <li><a href="../../#about-me" class="footer-link line">À propos</a></li>
+                <li><a href="../../assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+              </ul>
+            </div>
+      
+            <!-- Section droite : Réseaux sociaux -->
+            <div class="footer-social">
+              <h4>Suivez-moi</h4>
+              <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank" class="social-link">
+                <img src="../../assets/img/LinkedInLogo.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/JeromeCornu" target="_blank" class="social-link">
+                <img src="../../assets/img/Github.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Jérôme Cornu. Tous droits réservés.</p>
+          </div>
+        </section>
     </footer>
 </body>
 

@@ -22,6 +22,9 @@
 
 	<link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
+	
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 </head>
 
@@ -30,36 +33,28 @@
 
 	<div id="haut">
 		<script src="../../assets/js/script.js"></script>
-
-
 		<header>
-
 			<div style="position: relative;">
 				<img src="../../assets/img/BannerJerome.PNG" id="image_banniere">
 			</div>
 
 			<section id="menu_home">
-				<a href="../../index.html#portfolio" title="Immersion/Home">Home</a>
+			<a href="../../index.html#portfolio" title="Immersion/Home" class="line">Home</a>
 				<span>| Catalogue</span>
 			</section>
 
 		</header>
-
 		<h1>- Megascan -</h1>
-
-		
 
 		<div id="div_intro">
 			<img src="../../assets/img/Megascan.PNG" id="image_intro">
 		</div>
-
 	</div>
-
 
 	<div id="milieu">
 		<div id="contenu">
 
-			<h2>Context du projet</h2>
+			<h2>CONTEXT</h2>
 			<article>
 				Le projet consiste à créer un <em>environnement avec Megascan</em> en utilisant le moteur Unreal Engine et Quixel.</br>
 
@@ -76,7 +71,7 @@
 
 			</article> </br>
 
-			<h2>Liens vers le jeu</h2>
+			<h2>LIEN(s)</h2>
 
 			<h3>Build et Code</h3>
 			<article>
@@ -89,6 +84,42 @@
 
 	<footer id="bas">
 		<section id="bas_page">
+		  <div class="footer-container">
+			<!-- Section gauche : Infos sur l'auteur -->
+			<div class="footer-about">
+			  <h4>À propos de l'auteur</h4>
+			  <p>
+				<em>Jérôme Cornu</em>, développeur passionné spécialisé en jeux vidéo. Je combine créativité et
+				technique pour créer des expériences captivantes.
+			  </p>
+			</div>
+	  
+			<!-- Section centrale : Navigation rapide -->
+			<div class="footer-links">
+			  <h4>Liens utiles</h4>
+			  <ul>
+				<li><a href="../../#portfolio" class="footer-link line">Projets</a></li>
+				<li><a href="../../#about-me" class="footer-link line">À propos</a></li>
+				<li><a href="../../assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+			  </ul>
+			</div>
+	  
+			<!-- Section droite : Réseaux sociaux -->
+			<div class="footer-social">
+			  <h4>Suivez-moi</h4>
+			  <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank" class="social-link">
+				<img src="../../assets/img/LinkedInLogo.png" alt="LinkedIn" />
+				<span>LinkedIn</span>
+			  </a>
+			  <a href="https://github.com/JeromeCornu" target="_blank" class="social-link">
+				<img src="../../assets/img/Github.png" alt="GitHub" />
+				<span>GitHub</span>
+			  </a>
+			</div>
+		  </div>
+		  <div class="footer-bottom">
+			<p>© 2025 Jérôme Cornu. Tous droits réservés.</p>
+		  </div>
 		</section>
 	</footer>
 </body>

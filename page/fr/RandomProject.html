@@ -17,6 +17,9 @@
 
 	<link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
+    
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +33,7 @@
             </div>
 
             <section id="menu_home">
-                <a href="../../index.html#portfolio" title="Immersion/Home">Home</a>
+                <a href="../../index.html#portfolio" title="Immersion/Home" class="line">Home</a>
                 <span>| Random Project</span>
             </section>
         </header>
@@ -44,27 +47,65 @@
 
     <div id="milieu">
         <div id="contenu">
-            <h2>Context du projet</h2>
+            <h2>CONTEXT</h2>
             <article>
-                Random Project est un jeu 2D où les joueurs ouvrent des coffres avec du contenu aléatoire mais équilibré pour éviter la frustration due au hasard.
+                <em>Random Project</em> est un jeu 2D axé sur la <em>génération procédurale</em>. La génération procédurale est un processus de création automatique en temps réel. Elle permet une économie de ressources, une rejouabilité accrue et une scalabilité.
+                Dans ce jeu, une dizaine de coffres apparaissent, parfois inatteignables à cause d'obstacles. Les coffres sont regroupés par <em>niveau d'accessibilité</em>, et leur contenu est mélangé entre coffres de même type. Cela permet au joueur de fouiller les coffres désirés, offrant un <em>contenu pseudo-aléatoire</em>.
 
                 <h3>Date de création du projet</h3>
                 Réalisé en 2024 dans le cadre du Gaming Campus.
 
                 <h3>Equipe</h3>
-                Développé en collaboration avec une équipe de 4 développeurs.
+                Développé en collaboration avec un deuxième développeur : Alban Niemaz.
             </article> </br>
 
-            <h2>Liens vers le Code et la Build du jeu</h2>
-            <h3>Code</h3>
+            <h2>LIEN(s)</h2>
+            
             <article>
-                <a href="https://github.com/toncompte/RandomProject.git"> Cliquez ici pour accéder au GitHub </a>
+                <a href="https://github.com/zolori/RandomProject" class="line"> Cliquez ici pour accéder au GitHub </a>
             </article> </br>
         </div>
     </div>
 
     <footer id="bas">
-        <section id="bas_page"></section>
+        <section id="bas_page">
+          <div class="footer-container">
+            <!-- Section gauche : Infos sur l'auteur -->
+            <div class="footer-about">
+              <h4>À propos de l'auteur</h4>
+              <p>
+                <em>Jérôme Cornu</em>, développeur passionné spécialisé en jeux vidéo. Je combine créativité et
+                technique pour créer des expériences captivantes.
+              </p>
+            </div>
+      
+            <!-- Section centrale : Navigation rapide -->
+            <div class="footer-links">
+              <h4>Liens utiles</h4>
+              <ul>
+                <li><a href="../../#portfolio" class="footer-link line">Projets</a></li>
+                <li><a href="../../#about-me" class="footer-link line">À propos</a></li>
+                <li><a href="../../assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+              </ul>
+            </div>
+      
+            <!-- Section droite : Réseaux sociaux -->
+            <div class="footer-social">
+              <h4>Suivez-moi</h4>
+              <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank" class="social-link">
+                <img src="../../assets/img/LinkedInLogo.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/JeromeCornu" target="_blank" class="social-link">
+                <img src="../../assets/img/Github.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Jérôme Cornu. Tous droits réservés.</p>
+          </div>
+        </section>
     </footer>
 </body>
 
