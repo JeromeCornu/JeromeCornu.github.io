@@ -227,23 +227,6 @@ code {
   max-width: 100%;
 }
 
-#ronds_nb_projets {
-  position: static;
-  margin-left: 90%;
-  margin-top: 0%;
-}
-
-#nb_projets {
-  margin-left: 12px;
-  margin-bottom: 5px;
-  text-align: center;
-  width: 25px;
-  border: solid darkred;
-  border-radius: 100%;
-  border-width: 1px;
-  color: darkred;
-}
-
 #image_banniere {
   z-index: 1;
   width: 100%;
@@ -354,7 +337,12 @@ a:hover::after {
   justify-content: center;
   margin-top: 30px;
   margin-left: 0%;
+  min-height: 500px;
   order: 1;
+}
+
+#sujet_panel a {
+  text-decoration: none;
 }
 
 .background {
@@ -389,10 +377,6 @@ figure {
 figcaption {
   margin-left: 10px;
   color: rgb(214, 214, 214);
-}
-
-#sujet_panel a {
-  text-decoration: none;
 }
 
 .article_projet {
@@ -675,10 +659,6 @@ button.active,
   display: none !important;
 }
 
-#sujet_panel {
-  min-height: 500px;
-}
-
 /* Carousel container */
 #carousel {
   position: relative;
@@ -897,3 +877,250 @@ button.active,
   border-top: 1px solid #5a2c1142;
   padding-top: 10px;
 }
+
+
+
+/*
+RESPONSIVE PARTS
+*/
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  #main-section {
+    flex-direction: column;
+  }
+
+  #left-section,
+  #right-section {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  #about-me .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-profile,
+  .about-description {
+    max-width: 90%;
+  }
+
+  .about-profile .profile-logo,
+  .about-profile .profile-real {
+    width: 150px;
+    height: auto;
+  }
+
+  .about-profile .profile-pictures {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #carousel div img {
+    width: 90%;
+    height: auto;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  #bas .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-social {
+    flex: 1 1 auto;
+    margin: 10px 0;
+  }
+
+  #carousel {
+    height: 300px;
+  }
+
+  #carousel div img {
+    width: 280px;
+    height: auto;
+  }
+
+  #carousel div.prev img,
+  #carousel div.next img {
+    width: 200px;
+  }
+
+  #carousel div.prevLeftSecond img,
+  #carousel div.nextRightSecond img {
+    width: 150px;
+  }
+  
+  #carousel div.hideLeft img,
+  #carousel div.hideRight img {
+    width: 150px;
+    opacity: 0.5;
+    transform: scale(0.8);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .projet {
+    margin: 5px 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 200%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  h3 {
+    font-size: 120%;
+  }
+
+  #image_intro {
+    max-width: 100%;
+  }
+
+  .about-profile .profile-logo,
+  .about-profile .profile-real {
+    width: 150px;
+    height: auto;
+  }
+  
+  .about-profile .profile-pictures {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .skills-list li {
+    font-size: 14px;
+  }
+
+  .filter-button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  #carousel {
+    height: 250px;
+  }
+
+  #carousel div img {
+    width: 220px;
+    height: auto;
+  }
+
+  #carousel div.prev img,
+  #carousel div.next img {
+    width: 150px;
+  }
+
+  #carousel div.prevLeftSecond img,
+  #carousel div.nextRightSecond img {
+    width: 120px;
+  }
+  
+  #carousel div.hideLeft img,
+  #carousel div.hideRight img {
+    width: 120px;
+    opacity: 0.4;
+    transform: scale(0.7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .projet {
+    width: 126px;
+    height: 220px;
+  }
+  
+  .projet:hover {
+    width: 126px;
+    min-width: unset;
+  }
+
+  .article_projet {
+    height: 100px;
+  }
+
+  .projet h4.center {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .projet h3.center {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 90%;
+  }
+
+  .container h1 {
+    font-size: 150%;
+    margin: 10px 0;
+  }
+
+  .about-profile .profile-pictures {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .about-profile .profile-logo,
+  .about-profile .profile-real {
+    width: 100px;
+    height: auto;
+  }
+
+  .social-links a {
+    font-size: 12px;
+  }
+
+  .footer-about p,
+  .footer-links ul {
+    font-size: 12px;
+  }
+
+  #carousel {
+    height: 200px;
+  }
+
+  #carousel div img {
+    width: 180px;
+    height: auto;
+  }
+
+  #carousel div.prev img,
+  #carousel div.next img {
+    width: 120px;
+  }
+
+  #carousel div.prevLeftSecond img,
+  #carousel div.nextRightSecond img {
+    width: 100px;
+  }
+  
+  #carousel div.hideLeft img,
+  #carousel div.hideRight img {
+    width: 100px;
+    opacity: 0.3;
+    transform: scale(0.6);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+} 
