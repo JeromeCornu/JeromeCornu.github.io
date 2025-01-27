@@ -886,6 +886,11 @@ RESPONSIVE PARTS
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
+  
+  body {
+    font-size: 110%;
+  }
+
   #main-section {
     flex-direction: column;
   }
@@ -978,6 +983,10 @@ RESPONSIVE PARTS
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+  
   h1 {
     font-size: 200%;
   }
