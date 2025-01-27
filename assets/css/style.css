@@ -973,6 +973,10 @@ RESPONSIVE PARTS
   .projet {
     margin: 5px 5px;
   }
+
+  #contenu {
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1041,12 +1045,12 @@ RESPONSIVE PARTS
   }
 
   .projet {
-    width: 126px;
+    width: 110px;
     height: 220px;
   }
 
   .projet:hover {
-    width: 126px;
+    width: 110px;
     min-width: unset;
   }
 
