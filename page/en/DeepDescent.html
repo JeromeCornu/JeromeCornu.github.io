@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Cornu Jérôme - Legend Goblina</title>
+    <title>Jérôme Cornu - Deep Descent</title>
 
     <link rel="apple-touch-icon" href="SuricateIcon.png" />
     <link rel="icon" type="image/png" href="../../assets/img/SuricateIcon.png" />
@@ -19,12 +19,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gluten:wght@300&family=Nunito+Sans&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 
-
     <link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
     <link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
 
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
-
 
 <body>
 
@@ -38,53 +38,75 @@
 
 			<section id="menu_home">
 				<a href="index_eng.html#portfolio" title="Immersion/Home" class="line">Home</a>
-				<span>| The Legend Of Goblina</span>
+				<span>| Deep Descent</span>
 			</section>
 		</header>
 
-        <h1>- The Legend Of Goblina -</h1>
+        <h1>- Deep Descent -</h1>
 
         <div id="div_intro">
-            <img src="../../assets/img/LegendOfGoblina.png" id="image_intro">
+            <video controls id="image_intro">
+                <source src="../../assets/img/Trailer_DeepDescent.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
     </div>
-
 
     <div id="milieu">
         <div id="contenu">
 
-            <h2>Project Context</h2>
+            <h2>CONTEXT</h2>
             <article>
-                The project involves creating an <em>infiltration game</em> using <em>Unreal Engine</em>. The allotted time for the project is 4 weeks, and the C++ programming language is used (no Blueprint).</br>
+                The project involved creating a <em>3D first-person game with team progression</em> using the Unity engine. The programming language used is C#, and the game is a multiplayer Dungeon Crawler.</br>
 
                 <h3>Our Game</h3>
-                The game takes place in a food reserve where AI characters regularly bring pieces of meat. The goal is to retrieve this food and bring it back to the protagonist's hideout without being detected.</br>
+                The concept of the game is to explore dungeons as a team, fight enemies to collect resources and items, and progress as far as possible into the depths of the dungeon.</br>
 
-                The map is procedurally generated.
+                Players take on the roles of different characters with specific stats and must coordinate their efforts to survive the increasing challenges of the game.</br>
+
+                One player can create a session and invite others to join using a specific ID.
+
+                </br></br>
+                This project allowed me to explore different methods of setting up a multiplayer environment:
+                <ul>
+                    <li>
+                        <em>Client-Server:</em> Ideal for large-scale games like League of Legends or Overwatch. It effectively handles cheating and game data, though clients may experience lag depending on their distance from the server.
+                    </li>
+                    <li>
+                        <em>Peer-to-Peer:</em> Suitable for games where cheating is not a major concern, such as Borderlands or Age of Empires II. One client acts as the server, requiring good hardware.
+                    </li>
+                    <li>
+                        <em>Hybrid Architecture:</em> Used for medium-scale games with optimization needs, as seen in Fortnite or For Honor for certain features (e.g., voice systems or movement). It combines the two previous architectures.
+                    </li>
+                </ul>
 
                 <h3>Project Creation Date</h3>
-                This is the fourth project completed during the third year at <em>Gaming Campus</em>, specializing in computer science with a focus on video games.
+                This project was completed over a period of 2 months, with the equivalent of 3 weeks of work, in April 2024.
 
                 <h3>Team</h3>
-                The team consists of 3 developers in the third year at Gaming Campus.
+                The team consisted of 4 developers from the <em>Pause Café</em> group:
+                <ul>
+                    <li>Jérôme Cornu</li>
+                    <li>Arthur Bouffay</li>
+                    <li>Elvyn Wakeford</li>
+                    <li>Robin Douet</li>
+                </ul>
 
             </article> </br>
 
-            <h2>Links to the Game's Code and Build</h2>
-            
+            <h2>LINK(s)</h2>
+
             <article>
-                <a href="https://github.com/ThomasChatrefou/PROJET5_GRP4.git">Click here to access the GitHub repository</a>
+                <a href="https://github.com/Ryunawa/DeepDescent.git" class="line"> Click here to access the GitHub </a>
             </article> </br>
 
-            
             <article>
-                <a href="https://drive.google.com/drive/folders/17msRZ4Kmv4u6_JVuaWD7jlOWVbv7Rcj1?usp=sharing">Click here to download the game</a>
+                <a href="https://jeromecornu.itch.io/deep-descent" class="line"> Click here to download the game </a>
             </article> </br>
 
         </div>
     </div>
-
 
     
 <footer id="bas">
