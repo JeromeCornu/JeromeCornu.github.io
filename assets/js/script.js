@@ -118,5 +118,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  
+  // Run animations, gifs
+  const guy = document.querySelector(".guy");
+  const zombie = document.querySelector(".zombie");
+
+  function runCharacters() {
+    let startPosition = -150;
+
+    // Define speed and start position
+    guy.style.left = `${startPosition}px`;
+    zombie.style.left = `${startPosition}px`;
+
+    guy.style.opacity = "1";
+    zombie.style.opacity = "1";
+
+    // Anime Guy
+    guy.animate([{ left: `${startPosition}px` }, { left: "100vw" }], {
+      duration: 4000,
+      easing: "linear",
+    });
+
+    // Anime Zombie
+    setTimeout(() => {
+      zombie.animate([{ left: `${startPosition - 40}px` }, { left: "100vw" }], {
+        duration: 4500,
+        easing: "linear",
+      });
+    }, 200);
+
+    setTimeout(runCharacters, Math.random() * 20000 + 15000);
+  }
+
+  runCharacters();
 });
