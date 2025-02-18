@@ -122,32 +122,60 @@ document.addEventListener("DOMContentLoaded", function () {
   const guy = document.querySelector(".guy");
   const zombie = document.querySelector(".zombie");
 
-  function runCharacters() {
+  function startRace() {
     let startPosition = -150;
+    let zombieOffset = -40; // The zombie always starts slightly behind
 
-    // Define speed and start position
+    // Set initial positions
     guy.style.left = `${startPosition}px`;
-    zombie.style.left = `${startPosition}px`;
+    zombie.style.left = `${startPosition + zombieOffset}px`;
 
+    // Make characters visible
     guy.style.opacity = "1";
     zombie.style.opacity = "1";
 
-    // Anime Guy
+    let guyDuration = 5000; // Guy takes 5s to cross the screen
+    let zombieDuration = 5500; // Zombie takes 5.5s (slightly slower)
+
+    // Animate the Guy
     guy.animate([{ left: `${startPosition}px` }, { left: "100vw" }], {
-      duration: 4000,
+      duration: guyDuration,
       easing: "linear",
+      fill: "forwards",
     });
 
-    // Anime Zombie
+    // Animate the Zombie (slight delay so it's always behind)
     setTimeout(() => {
-      zombie.animate([{ left: `${startPosition - 40}px` }, { left: "100vw" }], {
-        duration: 4500,
-        easing: "linear",
-      });
+      zombie.animate(
+        [{ left: `${startPosition + zombieOffset}px` }, { left: "100vw" }],
+        {
+          duration: zombieDuration,
+          easing: "linear",
+          fill: "forwards",
+        }
+      );
     }, 200);
 
-    setTimeout(runCharacters, Math.random() * 20000 + 15000);
+    // Store the next appearance time in sessionStorage
+    let nextRaceIn = Math.random() * 20000 + 15000; // Between 15 and 20 seconds
+    sessionStorage.setItem("nextRaceTime", Date.now() + nextRaceIn);
+
+    // Schedule the next race
+    setTimeout(startRace, nextRaceIn);
   }
 
-  runCharacters();
+  // Check if a race was already scheduled before the page reload
+  let nextRaceTime = sessionStorage.getItem("nextRaceTime");
+
+  if (nextRaceTime) {
+    let now = Date.now();
+    if (now < nextRaceTime) {
+      // If the stored time is still in the future, wait before starting the next race
+      setTimeout(startRace, nextRaceTime - now);
+    } else {
+      startRace(); // Otherwise, start immediately
+    }
+  } else {
+    startRace(); // No previous race data, start immediately
+  }
 });
