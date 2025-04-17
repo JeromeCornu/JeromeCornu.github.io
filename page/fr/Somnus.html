@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Cornu Jérôme - Somnus</title>
+
+	<link rel="apple-touch-icon" href="SuricateIcon.png" />
+	<link rel="icon" type="image/png" href="../../assets/img/SuricateIcon.png" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../../assets/font/fabfeltscript/stylesheet.css" type="text/css" />
+	<link rel="stylesheet" href="../../assets/css/style.css" type="text/css" />
+    
+    <!-- Scss -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    <div id="haut">
+        <script src="../../assets/js/script.js"></script>
+
+        <header>
+            <div style="position: relative;">
+                <img src="../../assets/img/BannerJerome.png" id="image_banniere">
+            </div>
+
+            <section id="menu_home">
+                <a href="../../index.html#portfolio" title="Immersion/Home" class="line">Home</a>
+                <span>| Somnus</span>
+            </section>
+        </header>
+
+        <h1>- Project Somnus -</h1>
+
+<div id="div_intro">
+	<video controls id="image_intro">
+		<source src="../../assets/img/Somnus.mp4" type="video/mp4">
+		Votre navigateur ne supporte pas la balise vidéo.
+	</video>
+</div>
+
+<div id="milieu">
+	<div id="contenu">
+
+		<h2>CONTEXT</h2>
+		<article>
+			<em>Jeu solo en TPS jouable au clavier/souris et à la manette</em>, Project Somnus propose des mécaniques de combat variées basées sur un système de stances (ours, grenouille, aigle), chacune avec ses propres capacités offensives et défensives.</br>
+
+			Le cœur du projet repose sur un <strong>système d'IA modulaire</strong> : chaque IA peut changer de type dynamiquement avec des paramètres entièrement personnalisables. Types inclus :
+			<ul>
+        <li><em>Basique</em> (patrouille, fonce vers le joueur, attaque s'il est à portée, recherche)</li>
+        <li><em>Garde</em> (attaque à vue puis retour à son poste)</li>
+        <li><em>Armadillo</em> (patrouille, charge comme un animal)</li>        
+				<li><em>Friendly</em> (patrouille uniquement)</li>
+				<li><em>Test</em> (attaque uniquement)</li>
+				<li><em>Waypoint</em> avec animation personnalisée à chaque point</li>
+				<li><em>Dummy</em> d'entraînement (knockback uniquement)</li>
+			</ul>
+
+			Débuggage facilité par des <strong>outils visuels via gizmos</strong> intégrés (zones d’aggro, patrol paths, etc).</br>
+			Système de <strong>lock</strong> automatique et directionnel : ciblage fluide d'ennemis via stick analogique.
+    </br></br>
+			Le projet évite les arbres de comportement Unity au profit de scripts dédiés, permettant un meilleur contrôle. L'<strong>Animator</strong> est dense, intégrant de nombreux blends et conditions.
+    </br></br>
+			Enfin, le <strong>menu pause</strong> prend la forme d’un carnet interactif avec des objets 3D animés et du canvas 2D.
+    </br></br>
+			Tout ce système a été conçu par moi, à l’exception des stances grenouille et aigle.</br>
+
+
+    <h3>Equipe</h3>
+    Le projet a été développé par une petite équipe d'une dizaine de personnes, dont deux programmeurs. Je présente ici seulement le travail des programmeurs.
+
+		</article> </br>
+
+
+		<h2>LIEN(s)</h2>
+		<h3>Code source</h3>
+		<article>
+			<a href="https://github.com/MrNyvle/ProjectSomnus" class="line"> Voir le code sur GitHub </a>
+		</article> </br>
+
+	</div>
+</div>
+
+
+    <div id="race-track">
+            <img src="../../assets/img/guyRunning.gif" class="runner guy" alt="Guy Running">
+            <img src="../../assets/img/zombieRunning.gif" class="runner zombie" alt="Zombie Running">
+        </div>
+
+        
+        <footer id="bas">
+        <section id="bas_page">
+          <div class="footer-container">
+            <!-- Section gauche : Infos sur l'auteur -->
+            <div class="footer-about">
+              <h4>À propos de l'auteur</h4>
+              <p>
+                <em>Jérôme Cornu</em>, développeur passionné spécialisé en jeux vidéo. Je combine créativité et
+                technique pour créer des expériences captivantes.
+              </p>
+            </div>
+      
+            <!-- Section centrale : Navigation rapide -->
+            <div class="footer-links">
+              <h4>Liens utiles</h4>
+              <ul>
+                <li><a href="../../#portfolio" class="footer-link line">Projets</a></li>
+                <li><a href="../../#about-me" class="footer-link line">À propos</a></li>
+                <li><a href="../../assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+              </ul>
+            </div>
+      
+            <!-- Section droite : Réseaux sociaux -->
+            <div class="footer-social">
+              <h4>Suivez-moi</h4>
+              <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank" class="social-link">
+                <img src="../../assets/img/LinkedInLogo.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/JeromeCornu" target="_blank" class="social-link">
+                <img src="../../assets/img/Github.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Jérôme Cornu. Tous droits réservés.</p>
+          </div>
+        </section>
+    </footer>
+</body>
+
+</html>
