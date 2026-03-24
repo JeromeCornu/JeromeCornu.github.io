@@ -84,7 +84,7 @@
         J’apprécie particulièrement le prototypage de mécaniques, la conception de systèmes de gameplay et l’itération sur l’expérience joueur directement dans les moteurs de jeu. Je travaille principalement avec Unity (C#) et Unreal Engine (Blueprints/C++), où je transforme des idées de design en fonctionnalités jouables tout en gardant un code propre, modulaire et facile à faire évoluer.
     </article>
 
-    </br>
+    <br />
     <div class="social-links">
         <a href="https://www.linkedin.com/in/jeromecornu-game" target="_blank">
             <img src="assets/img/LinkedInLogo.png" alt="LinkedIn" />
@@ -99,7 +99,7 @@
             <span>Télécharger le CV</span>
         </a>
     </div>
-    </br>
+    <br />
 
     <h3>Compétences clés</h3>
     <ul class="skills-list">
@@ -165,6 +165,48 @@
 </section>
 <!-------------------------- FIN PROJET CODE MIS EN AVANT -------------------------->
 
+<!-------------------------- QA TESTING SHOWCASE -------------------------->
+<section id="qa-showcase">
+    <div class="page-container">
+        <div class="container">
+            <h2>Démonstration QA</h2>
+        </div>
+    </div>
+
+    <div class="featured-project-card qa-showcase-card">
+        <div class="featured-project-content">
+            <span class="featured-badge">Exercice QA mis en avant</span>
+            <h3>Palworld – Exercice de rédaction de bugs QA</h3>
+            <p class="featured-hook">
+                Un exercice pratique de QA centré sur les systèmes de gameplay, le comportement de l’IA, les mécaniques de construction et la cohérence UX.
+            </p>
+
+            <p>
+                J’ai documenté une sélection de bugs représentatifs sur <strong>Palworld</strong>,
+                avec un focus sur la reproduction, l’évaluation de l’impact et une rédaction structurée proche d’un workflow de production.
+            </p>
+
+            <p>
+                Cet exercice met en avant ma capacité à identifier des problèmes, à distinguer les bugs des retours joueur,
+                et à rédiger des rapports clairs et exploitables par une équipe de production.
+            </p>
+
+            <ul class="featured-list">
+                <li><strong>Interaction entre systèmes de gameplay :</strong> Ring of Mercy n’empêche pas la mort via les dégâts sur la durée</li>
+                <li><strong>Comportement IA :</strong> les Pals peuvent entrer dans des états invalides ou rester bloqués</li>
+                <li><strong>Construction / collision :</strong> un œuf apparaît dans le sol à cause d’un placement invalide de la ferme de reproduction</li>
+                <li><strong>Cohérence UX :</strong> le dépôt automatique met en surbrillance des objets de manière incohérente</li>
+            </ul>
+
+            <div class="featured-actions">
+                <a href="#qa-popup" class="featured-button" id="open-qa-popup">
+                    Voir les tickets QA
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------------------------- END QA TESTING SHOWCASE -------------------------->
 
         <!-------------------------- MES PROJETS FAVORIS -------------------------->
         <section>
@@ -380,6 +422,164 @@
             
         <!-------------------------- fin mes autres projets -------------------------->
 
+<div id="qa-popup" class="overlay">
+    <div class="popup qa-popup">
+        <h2>Palworld – Exercice de rédaction de bugs QA</h2>
+        <a class="close" href="#qa-showcase">&times;</a>
+
+        <div class="content">
+            <p class="qa-intro">
+                Exercice de QA réalisé sur <em>Palworld</em>, centré sur les systèmes de gameplay, le comportement de l’IA,
+                les mécaniques de construction et la cohérence UX, à travers des rapports de bugs structurés comme des tickets de production.
+            </p>
+
+            <article class="qa-ticket">
+                <div class="qa-ticket-summary">
+                    <h3>Gameplay Bug – Ring Of Mercy n’empêche pas la mort via les dégâts sur la durée</h3>
+                    <p><strong>Taux de reproduction :</strong> 4/5</p>
+                    <p><strong>Sévérité :</strong> Haute</p>
+                    <p><strong>Résumé :</strong> Les ennemis peuvent toujours mourir à cause du feu ou du poison alors que le Ring of Mercy est équipé.</p>
+                </div>
+
+                <details class="qa-details">
+                    <summary>Voir les détails</summary>
+
+                    <div class="qa-details-content">
+                        <p><strong>Étapes de reproduction</strong></p>
+                        <ol>
+                            <li>Débloquer et fabriquer le Ring of Mercy.</li>
+                            <li>Équiper le Ring of Mercy.</li>
+                            <li>Invoquer un Pal montable disposant d’une capacité infligeant des dégâts sur la durée (par exemple poison ou feu).</li>
+                            <li>Monter le Pal.</li>
+                            <li>Tuer un ennemi avec une capacité infligeant des dégâts sur la durée depuis le Pal monté.</li>
+                        </ol>
+
+                        <p><strong>Résultat actuel</strong><br>
+                        Le Ring Of Mercy est équipé. Le joueur combat un ennemi tout en montant un Pal avec des capacités de brûlure ou d’empoisonnement. L’ennemi meurt.</p>
+
+                        <p><strong>Résultat attendu</strong><br>
+                        Le Ring Of Mercy est équipé. Le joueur combat un ennemi tout en montant un Pal avec des capacités de brûlure ou d’empoisonnement. L’ennemi ne peut pas mourir.</p>
+
+                        <p><strong>Pièces jointes</strong><br>
+                        Capture: Définition de l'Anneau de Pitié</p>
+
+                        <img src="../../assets/img/QA/palworld_ring_of_mercy_dot_kill.png" alt="Définition de l'Anneau de Pitié" class="qa-image">
+
+                    </div>
+                </details>
+            </article>
+
+            <article class="qa-ticket">
+                <div class="qa-ticket-summary">
+                    <h3>AI Bug – Les Pals peuvent entrer dans des états invalides</h3>
+                    <p><strong>Taux de reproduction :</strong> 3/5</p>
+                    <p><strong>Sévérité :</strong> Moyenne</p>
+                    <p><strong>Résumé :</strong> Les Pals peuvent rester bloqués, dormir en dehors des lits ou travailler depuis des positions incorrectes.</p>
+                </div>
+
+                <details class="qa-details">
+                    <summary>Voir les détails</summary>
+
+                    <div class="qa-details-content">
+                        <p><strong>Étapes de reproduction</strong></p>
+                        <ol>
+                            <li>Aller dans un camp contenant plusieurs structures et nœuds de ressources.</li>
+                            <li>Laisser les Pals travailler de manière autonome.</li>
+                            <li>Observer leur comportement au fil du temps autour des structures et du terrain.</li>
+                        </ol>
+
+                        <p><strong>Résultat actuel</strong><br>
+                        Les Pals peuvent rester bloqués sur le terrain, sur des structures ou sur des nœuds de ressources. Ils peuvent dormir au sol sans utiliser de lit, travailler alors qu’ils sont éloignés de leur cible, ou rester inactifs à cause d’un déplacement bloqué.</p>
+
+                        <p><strong>Résultat attendu</strong><br>
+                        Les Pals devraient se déplacer correctement, éviter de rester bloqués, dormir uniquement dans des lits valides et travailler uniquement lorsqu’ils sont correctement positionnés avec un accès valide à leur cible.</p>
+
+                        <p><strong>Notes</strong><br>
+                        Le problème a été observé à la fois sur des structures et directement sur le terrain. Cela suggère une incohérence de pathfinding et/ou de validation d’état.</p>
+
+                        <p><strong>Pièces jointes</strong><br>
+                        Capture : Pals bloqués sur des nœuds de ressources</p>
+
+                        <img src="assets/img/QA/palworld_pals_stuck_nodes.png" alt="Pals bloqués sur des nœuds de ressources" class="qa-image">
+                    </div>
+                </details>
+            </article>
+
+            <article class="qa-ticket">
+                <div class="qa-ticket-summary">
+                    <h3>Gameplay Bug – Le placement de la ferme de reproduction peut faire apparaître un œuf dans le terrain</h3>
+                    <p><strong>Taux de reproduction :</strong> Impossible à reproduire de manière fiable</p>
+                    <p><strong>Sévérité :</strong> Haute</p>
+                    <p><strong>Résumé :</strong> Une ferme de reproduction placée trop bas peut produire un œuf dans le sol, le rendant inaccessible et bloquant ensuite la construction.</p>
+                </div>
+
+                <details class="qa-details">
+                    <summary>Voir les détails</summary>
+
+                    <div class="qa-details-content">
+                        <p><strong>Étapes de reproduction</strong></p>
+                        <ol>
+                            <li>Placer une ferme de reproduction sur un terrain irrégulier ou avec peu d’espace sous la structure.</li>
+                            <li>Attendre qu’un œuf soit produit.</li>
+                            <li>Essayer de récupérer l’œuf.</li>
+                            <li>Démonter la ferme de reproduction puis essayer de récupérer l’œuf ou de reconstruire au même endroit.</li>
+                        </ol>
+
+                        <p><strong>Résultat actuel</strong><br>
+                        La ferme de reproduction peut être placée trop bas par rapport au sol. L’œuf produit apparaît dans le terrain et ne peut pas être récupéré. Démonter la ferme ne permet pas de récupérer l’œuf. L’emplacement reste bloqué pour la construction, comme si l’œuf existait toujours à cet endroit.</p>
+
+                        <p><strong>Résultat attendu</strong><br>
+                        La ferme de reproduction devrait s’aligner correctement au terrain lors du placement, être relevée automatiquement si nécessaire, ou la construction devrait être refusée si le point d’apparition de l’œuf intersecte le terrain. Les œufs produits devraient toujours apparaître dans une position valide et accessible.</p>
+
+                        <p><strong>Notes</strong><br>
+                        Le contournement utilisé a été de construire une plateforme surélevée ailleurs. Capture disponible.</p>
+
+                        <p><strong>Pièces jointes</strong><br>
+                        Capture : ferme de reproduction placée trop bas, œuf inaccessible dans le terrain</p>
+
+                        <img src="assets/img/QA/palworld_breeding_farm_egg_in_ground.png" alt="Œuf apparu dans le terrain sous une ferme de reproduction" class="qa-image">
+                    </div>
+                </details>
+            </article>
+
+            <article class="qa-ticket">
+                <div class="qa-ticket-summary">
+                    <h3>UX Bug – Mise en surbrillance incohérente dans l’inventaire pendant le dépôt automatique</h3>
+                    <p><strong>Taux de reproduction :</strong> 4/5</p>
+                    <p><strong>Sévérité :</strong> Mineure</p>
+                    <p><strong>Résumé :</strong> Les objets mis en surbrillance ne correspondent pas toujours aux objets réellement déposés dans le stockage du camp.</p>
+                </div>
+
+                <details class="qa-details">
+                    <summary>Voir les détails</summary>
+
+                    <div class="qa-details-content">
+                        <p><strong>Étapes de reproduction</strong></p>
+                        <ol>
+                            <li>Aller dans l’un des camps.</li>
+                            <li>Récupérer différentes ressources comme des matériaux, matériaux de Pals, équipements et sphères.</li>
+                            <li>Ouvrir le menu d’inventaire.</li>
+                            <li>Appuyer sur “R” pour effectuer le dépôt automatique dans le camp.</li>
+                            <li>Valider le dépôt.</li>
+                        </ol>
+
+                        <p><strong>Résultat actuel</strong><br>
+                        Certains objets mis en surbrillance ne sont pas déposés, tandis que certains objets non surlignés le sont. Le feedback visuel ne correspond pas toujours au comportement réel du système, ce qui rend difficile la compréhension de ce qui sera effectivement stocké.</p>
+
+                        <p><strong>Résultat attendu</strong><br>
+                        Seuls les objets réellement déposés devraient être mis en surbrillance, et tous les objets surlignés devraient correspondre exactement au résultat final du dépôt.</p>
+
+                        <p><strong>Pièces jointes</strong><br>
+                        Capture : mise en surbrillance incohérente pendant le dépôt automatique</p>
+
+                        <img src="assets/img/QA/palworld_inventory_auto_deposit_highlight.png" alt="Incohérence de surbrillance pendant le dépôt automatique dans l’inventaire" class="qa-image">
+                    </div>
+                </details>
+            </article>
+        </div>
+    </div>
+</div>
+
         <div id="race-track">
             <img src="assets/img/guyRunning.gif" class="runner guy" alt="Guy Running">
             <img src="assets/img/zombieRunning.gif" class="runner zombie" alt="Zombie Running">
@@ -398,14 +598,16 @@
                 </div>
           
                 <!-- Section centrale : Navigation rapide -->
-                <div class="footer-links">
-                  <h4>Liens utiles</h4>
-                  <ul>
-                    <li><a href="#portfolio" class="footer-link line">Projets</a></li>
-                    <li><a href="#about-me" class="footer-link line">À propos</a></li>
-                    <li><a href="assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
-                  </ul>
-                </div>
+<div class="footer-links">
+    <h4>Liens utiles</h4>
+    <ul>
+        <li><a href="#featured-project" class="footer-link line">Démonstration de code</a></li>
+        <li><a href="#qa-showcase" class="footer-link line">Démonstration QA</a></li>
+        <li><a href="#portfolio" class="footer-link line">Tous mes projets</a></li>
+        <li><a href="#about-me" class="footer-link line">À propos de moi</a></li>
+        <li><a href="assets/files/CV CORNU Jérôme - Francais.pdf" download class="footer-link line">Télécharger le CV</a></li>
+    </ul>
+</div>
           
                 <!-- Section droite : Réseaux sociaux -->
                 <div class="footer-social">
